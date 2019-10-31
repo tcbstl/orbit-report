@@ -18,7 +18,6 @@ export class AppComponent {
     this.sourceList = [];
     this.displayList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json';
-   //  let displayList = [];
  
     window.fetch(satellitesUrl).then(function(response) {
        response.json().then(function(data) {
@@ -42,8 +41,6 @@ export class AppComponent {
          matchingSatellites.push(this.sourceList[i]);
       }
    }
-   // assign this.displayList to be the the array of matching satellites
-   // this will cause Angular to re-make the table, but now only containing matches
    this.displayList = matchingSatellites;
 }
 }
