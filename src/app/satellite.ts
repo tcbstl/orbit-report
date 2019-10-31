@@ -15,5 +15,17 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.operational = operational;
     this.launchDate = launchDate;
 }
+
+shouldShowWarning (value: boolean) {
+    if (this.type === "Space Debris"){
+        console.log("SPACE DEBRIS!!!!!!!!!!")
+        // this.className = 'warning';
+        return true;
+    }
+    else {
+        return false;
+    }
+    return true;
+}
 }
 
